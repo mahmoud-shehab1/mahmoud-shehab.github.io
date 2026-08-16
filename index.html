@@ -60,17 +60,11 @@
             pointer-events: none;
         }
 
-        .hero-top-bar {
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 1.5rem;
-        }
-
         .hero-wrapper {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .hero-text-content {
@@ -109,33 +103,21 @@
             font-size: 1.3rem;
             color: #94a3b8;
             font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .hero-pitch {
-            background: rgba(255, 255, 255, 0.05);
-            border-right: 4px solid var(--cyan-accent);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(5px);
         }
 
-        .hero-pitch h3 {
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 0.4rem;
-            font-weight: 700;
+        .hero-top-bar {
+            margin-bottom: 0.8rem;
         }
 
-        .hero-pitch p {
-            font-size: 1rem;
-            color: #cbd5e1;
-            line-height: 1.5;
+        .hero-top-bar .btn {
+            width: 100%;
+            justify-content: flex-start;
+            text-align: right;
         }
 
         .hero-profile-side {
-            flex: 0 0 380px;
+            flex: 0 0 340px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -147,13 +129,13 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
         }
 
         .hero-full-img {
             width: 100%;
             max-height: 380px;
-            object-fit: contain;
+            object-fit: cover;
             filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
             border-radius: 16px;
         }
@@ -282,10 +264,6 @@
             margin-bottom: 1rem;
         }
 
-        .about-text-content p:last-child {
-            margin-bottom: 0;
-        }
-
         /* ------------------ EXPERIENCE TIMELINE ------------------ */
         .experience-section {
             background-color: var(--card-bg);
@@ -323,10 +301,6 @@
         .timeline-item {
             position: relative;
             margin-bottom: 1.8rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
         }
 
         .timeline-dot {
@@ -516,72 +490,23 @@
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
 
-        .cta {
-            text-align: center;
-            padding: 3rem 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: white;
-        }
-
-        .cta h2 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .cta p {
-            color: #94a3b8;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .cta .btn {
-            background: white;
-            color: var(--primary-dark);
-        }
-
-        /* ------------------ CONTACT & FOOTER ------------------ */
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-item i {
-            font-size: 1.4rem;
-            color: var(--accent-blue);
-            background: #eff6ff;
-            padding: 0.8rem;
-            border-radius: 50%;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
             gap: 0.8rem;
-            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
-            background-color: var(--card-bg);
-            color: var(--primary-dark);
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -606,20 +531,13 @@
                 flex-direction: column;
                 text-align: center;
             }
-            .hero-top-bar {
-                justify-content: center;
-            }
             .hero-text-content h1 {
                 font-size: 2.2rem;
             }
-            .hero-pitch {
-                border-right: none;
-                border-bottom: 3px solid var(--cyan-accent);
-            }
             .hero-profile-side {
-                flex: 0 0 auto;
                 width: 100%;
                 max-width: 360px;
+                margin: 0 auto;
             }
         }
 
@@ -627,94 +545,14 @@
             header {
                 padding: 1.5rem 0 1rem 0;
             }
-            section {
-                padding: 2rem 0;
-            }
             .container {
                 padding: 0 12px;
-            }
-            .section-title {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
             }
             .hero-text-content h1 {
                 font-size: 1.8rem;
             }
-            .hero-text-content h2 {
-                font-size: 1.1rem;
-            }
-            .hero-badge {
-                font-size: 0.75rem;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                padding: 0.5rem 0;
-            }
-            nav ul li {
-                margin: 0 0.3rem;
-            }
-            nav ul li a {
-                font-size: 0.85rem;
-            }
-            
             .skills-grid, .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
-            }
-            .skill-card, .service-card {
-                padding: 1rem;
-            }
-            .skill-card-header h3, .service-card h3 {
-                font-size: 0.95rem;
-            }
-            .skill-card p, .service-card p {
-                font-size: 0.8rem;
-                line-height: 1.4;
-            }
-            .about-card, .experience-section, .custom-card-section, .contact-info {
-                padding: 1.2rem;
-                border-radius: 12px;
-            }
-            .edu-item {
-                padding: 0.8rem;
-            }
-        }
-
-        /* ------------------ PRINT OPTIMIZATION ------------------ */
-        @media print {
-            body {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            header {
-                background: #0b1329 !important;
-                box-shadow: none !important;
-                overflow: visible !important;
-            }
-            header::before {
-                display: none !important;
-            }
-            .hero-badge {
-                backdrop-filter: none !important;
-                background: #1e3a8a !important;
-                color: #ffffff !important;
-            }
-            .hero-text-content h1 {
-                color: #ffffff !important;
-                background: none !important;
-                -webkit-text-fill-color: #ffffff !important;
-            }
-            .hero-full-img {
-                filter: none !important;
-            }
-            nav, .cta, .hero-top-bar {
-                display: none !important;
-            }
-            .about-card, .experience-section, .custom-card-section, .contact-info, .service-card, .skill-card {
-                box-shadow: none !important;
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -724,10 +562,9 @@
     <!-- HERO SECTION / HEADER -->
     <header>
         <div class="container">
-            <!-- زر التواصل في أعلى الصفحة يميناً -->
-
-           
-                <!-- الجزء النصي والتسويقي -->
+            <div class="hero-wrapper">
+                
+                <!-- الجزء النصي والتسويقي (على اليمين) -->
                 <div class="hero-text-content">
                     <div class="hero-badge-container">
                         <span class="hero-badge"><i class="fas fa-check-circle"></i> مدير تشغيل</span>
@@ -737,34 +574,35 @@
 
                     <h1>محمود شهاب محمود</h1>
                     <h2>خبير الميزانيات، الامتثال الحكومي والتطوير الإداري</h2>
-                     <div class="hero-top-bar">
-                <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> هل تبحث عن إدارة مالية وإدارية محترفة لمؤسستك؟</a>
-            </div>
-            <div class="hero-top-bar">
-                <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> أنا هنا لمساعدتك في ضبط أمورك المالية والإدارية وتحقيق أعلى مستويات النمو!</a>
-            </div>
-            <div class="hero-wrapper">
-                <!-- جانب الصورة وبجوارها بيانات التواصل السريعة -->
+
+                    <div class="hero-top-bar">
+                        <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> هل تبحث عن إدارة مالية وإدارية محترفة لمؤسستك؟</a>
+                    </div>
+                    <div class="hero-top-bar">
+                        <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> أنا هنا لمساعدتك في ضبط أمورك المالية والإدارية وتحقيق أعلى مستويات النمو!</a>
+                    </div>
+                </div>
+
+                <!-- جانب الصورة وبجوارها بيانات التواصل السريعة (على يسار الصفحة) -->
                 <div class="hero-profile-side">
                     <div class="hero-img-container">
                         <img src="photo_5769588538801328084_y.jpg.webp" alt="محمود شهاب محمود" class="hero-full-img">
                     </div>
 
-                    <!-- بطاقة تواصل معي (بجوار / أسفل الصورة المباشرة) -->
+                    <!-- بطاقة التواصل تحت الصورة مباشرّة على جهة اليسار -->
                     <div class="header-contact-card">
                         <h4><i class="fas fa-address-card"></i> تواصل معي</h4>
                         <div class="social-links">
-                <a href="https://www.facebook.com/share/155XKrP6WP/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/1mahmoudshehab2?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/mahmoud-shehab-681266319" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/1mahmoud_shehab" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/qr/26ZTUU2PFM7VF1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
+                            <a href="https://www.facebook.com/share/155XKrP6WP/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/1mahmoudshehab2?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/mahmoud-shehab-681266319" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/1mahmoud_shehab" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/qr/26ZTUU2PFM7VF1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                         <div class="header-contact-item">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:123mahmoud12shehab@gmail.com">123mahmoud12shehab@gmail.com</a>
                         </div>
-                         
                         <div class="header-contact-item">
                             <i class="fas fa-phone-alt"></i>
                             <span dir="ltr">+966 51 023 8299</span>
@@ -779,6 +617,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -960,43 +799,16 @@
                 </div>
                 <div class="service-card">
                     <i class="fas fa-file-invoice-dollar"></i>
-                    <h3>إدارة الضرائب والزكاة</h3>
-                    <p>تقديم الإقرارات الضريبية والتخطيط المالي المتوافق مع هيئة الزكاة والضريبة.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>التحليل المالي</h3>
-                    <p>تحليل مالي دقيق يساعد في اتخاذ القرارات وتجنب المخاطر الاستثمارية.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-coins"></i>
-                    <h3>ترشيد التكاليف</h3>
-                    <p>تحليل وترشيد التكاليف وتحسين الربحية عبر استراتيجيات خفض الهدر.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>تأسيس الأنظمة المحاسبية</h3>
-                    <p>تصميم وتطوير أنظمة محاسبية متكاملة تتناسب مع حجم المنشأة.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h3>الامتثال الحكومي</h3>
-                    <p>مراجعة دقة السجلات المالية وضمان الالتزام الشامل بأنظمة العمل والمنصات.</p>
+                    <h3>الإقرارات الضريبية</h3>
+                    <p>إدارة وتجهيز إقرارات ضريبة القيمة المضافة وضريبة الدخل والدعم المحاسبي الشامل.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
-   
-                    <i class="fas fa-phone-alt"></i>
-                  
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>جميع الحقوق محفوظة © محمود شهاب محمود</p>
+            <p>جميع الحقوق محفوظة &copy; 2026 محمود شهاب محمود</p>
         </div>
     </footer>
 

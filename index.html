@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محمود شهاب محمود - محاسب عام ومدير عمليات مالي</title>
+    <title>محمود شهاب محمود - محاسب عام ومدير عمليات مالي وإداري</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Tajawal Font -->
@@ -28,10 +28,14 @@
             font-family: 'Tajawal', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
@@ -46,7 +50,7 @@
             background: linear-gradient(135deg, #0b1329 0%, #1a233a 50%, #0f172a 100%);
             position: relative;
             color: white;
-            padding: 4rem 0 3rem 0;
+            padding: 5rem 0 4rem 0;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
@@ -54,11 +58,11 @@
         header::before {
             content: '';
             position: absolute;
-            top: -50%;
+            top: -30%;
             right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(0,0,0,0) 70%);
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, rgba(0,0,0,0) 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -68,23 +72,22 @@
             align-items: center;
             justify-content: space-between;
             gap: 3rem;
-            min-height: 480px;
         }
 
         .hero-text-content {
-            flex: 1;
+            flex: 1.2;
             z-index: 2;
         }
 
         .hero-badge {
             display: inline-block;
-            background: rgba(37, 99, 235, 0.2);
-            border: 1px solid rgba(6, 182, 212, 0.4);
+            background: rgba(37, 99, 235, 0.25);
+            border: 1px solid rgba(6, 182, 212, 0.5);
             color: var(--cyan-accent);
             padding: 0.4rem 1.2rem;
             border-radius: 50px;
             font-size: 0.95rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1.2rem;
             backdrop-filter: blur(5px);
         }
@@ -94,14 +97,14 @@
             font-weight: 800;
             letter-spacing: -0.5px;
             line-height: 1.2;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             background: linear-gradient(90deg, #ffffff 0%, #e2e8f0 50%, var(--cyan-accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-text-content h2 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #94a3b8;
             font-weight: 500;
             margin-bottom: 1.5rem;
@@ -110,7 +113,7 @@
         .hero-quote {
             font-size: 1.1rem;
             color: #cbd5e1;
-            border-right: 3px solid var(--accent-blue);
+            border-right: 4px solid var(--accent-blue);
             padding-right: 1rem;
             margin-bottom: 2rem;
             font-style: italic;
@@ -119,39 +122,38 @@
         .hero-actions {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .hero-img-container {
-            flex: 0 0 350px;
+            flex: 0 0 320px;
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             z-index: 2;
         }
 
         .hero-full-img {
             width: 100%;
-            border-radius: 20px;
+            border-radius: 24px;
             object-fit: cover;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.4s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .hero-full-img:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3);
         }
 
         /* ------------------ NAVIGATION ------------------ */
         nav {
             background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         nav ul {
@@ -159,10 +161,7 @@
             justify-content: center;
             list-style: none;
             padding: 1rem 0;
-        }
-
-        nav ul li {
-            margin: 0 1.5rem;
+            gap: 2rem;
         }
 
         nav ul li a {
@@ -172,7 +171,7 @@
             font-size: 1.05rem;
             transition: all 0.3s ease;
             position: relative;
-            padding-bottom: 5px;
+            padding-bottom: 6px;
         }
 
         nav ul li a:hover {
@@ -185,9 +184,10 @@
             bottom: 0;
             right: 0;
             width: 0%;
-            height: 2px;
+            height: 3px;
             background-color: var(--cyan-accent);
             transition: width 0.3s ease;
+            border-radius: 2px;
         }
 
         nav ul li a:hover::after {
@@ -196,12 +196,12 @@
 
         /* ------------------ SECTIONS COMMON ------------------ */
         section {
-            padding: 4.5rem 0;
+            padding: 5rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             font-size: 2.2rem;
             font-weight: 800;
             color: var(--primary-dark);
@@ -211,7 +211,7 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 70px;
+            width: 80px;
             height: 4px;
             background: linear-gradient(90deg, var(--accent-blue), var(--cyan-accent));
             margin: 0.8rem auto 0;
@@ -221,12 +221,13 @@
         /* ------------------ ABOUT SECTION ------------------ */
         .about-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 3rem;
+            padding: 3.5rem;
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 3.5rem;
+            border: 1px solid #f1f5f9;
         }
 
         .about-text-content {
@@ -234,17 +235,17 @@
         }
 
         .about-text-content p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #334155;
-            line-height: 1.8;
+            line-height: 1.9;
             margin-bottom: 1.5rem;
         }
 
         .about-image-wrapper {
             flex: 0.8;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
         .about-image-wrapper img {
@@ -256,29 +257,30 @@
         }
 
         .about-image-wrapper:hover img {
-            transform: scale(1.04);
+            transform: scale(1.05);
         }
 
         /* ------------------ EXPERIENCE TIMELINE ------------------ */
         .experience-section {
             background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 3rem;
+            border-radius: 20px;
+            padding: 3.5rem;
             margin-top: 3rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
         }
 
         .exp-header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
             border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 1rem;
+            padding-bottom: 1.2rem;
         }
 
         .exp-header i {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--accent-blue);
         }
 
@@ -289,7 +291,7 @@
 
         .timeline {
             position: relative;
-            padding-right: 25px;
+            padding-right: 30px;
             border-right: 3px solid #e2e8f0;
         }
 
@@ -304,33 +306,35 @@
 
         .timeline-dot {
             position: absolute;
-            right: -34px;
+            right: -39px;
             top: 5px;
             width: 16px;
             height: 16px;
             background-color: var(--accent-blue);
             border: 4px solid #ffffff;
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+            box-shadow: 0 0 0 4px rgba(37,99,235,0.25);
             border-radius: 50%;
         }
 
         .timeline-content {
             background-color: #f8fafc;
-            padding: 1.8rem;
-            border-radius: 12px;
+            padding: 2rem;
+            border-radius: 14px;
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .timeline-content:hover {
             transform: translateX(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background-color: #ffffff;
         }
 
         .timeline-date {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             color: white;
-            padding: 0.3rem 1rem;
+            padding: 0.35rem 1.1rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
@@ -339,13 +343,13 @@
 
         .timeline-content h3 {
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             margin-bottom: 0.3rem;
         }
 
         .timeline-content h4 {
             color: var(--accent-blue);
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
@@ -355,17 +359,19 @@
         }
 
         .timeline-content ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             color: #475569;
+            font-size: 1rem;
         }
 
         /* ------------------ SKILLS & EDUCATION CARDS ------------------ */
         .custom-card-section {
             background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 3rem;
+            border-radius: 20px;
+            padding: 3.5rem;
             margin-top: 3rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
         }
 
         .skills-grid {
@@ -376,8 +382,8 @@
 
         .skill-card {
             background-color: #f8fafc;
-            border-radius: 12px;
-            padding: 1.8rem;
+            border-radius: 14px;
+            padding: 2rem;
             border: 1px solid #e2e8f0;
             border-top: 4px solid var(--accent-blue);
             transition: all 0.3s ease;
@@ -385,7 +391,7 @@
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
             background-color: #ffffff;
         }
 
@@ -402,12 +408,12 @@
         }
 
         .skill-card-header h3 {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--primary-dark);
         }
 
         .skill-card p {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: #64748b;
         }
 
@@ -422,24 +428,30 @@
             align-items: center;
             gap: 1.5rem;
             background-color: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 12px;
+            padding: 1.8rem;
+            border-radius: 14px;
             border: 1px solid #e2e8f0;
             border-right: 5px solid var(--cyan-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .edu-item:hover {
+            transform: translateX(-5px);
+            background-color: #ffffff;
         }
 
         .edu-item i {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--cyan-accent);
         }
 
         .edu-details h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--primary-dark);
         }
 
         .edu-details p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #64748b;
         }
 
@@ -450,14 +462,14 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
             background-color: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 16px;
+            padding: 2.8rem 2rem;
+            border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
@@ -465,45 +477,45 @@
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .service-card i {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--accent-blue);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-card h3 {
             margin-bottom: 0.8rem;
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 1.35rem;
         }
 
         .service-card p {
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         /* ------------------ BUTTONS & CTA ------------------ */
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             color: white;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
+            padding: 0.85rem 2.2rem;
+            font-size: 1.05rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
         }
 
         .cta {
@@ -514,30 +526,36 @@
         }
 
         .cta h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 1rem;
         }
 
         .cta p {
             color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            margin-bottom: 2.2rem;
+            font-size: 1.15rem;
         }
 
         .cta .btn {
             background: white;
             color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .cta .btn:hover {
+            background: #f8fafc;
         }
 
         /* ------------------ CONTACT & FOOTER ------------------ */
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 16px;
+            padding: 3.5rem;
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
         }
 
         .contact-item {
@@ -550,35 +568,37 @@
             font-size: 1.8rem;
             color: var(--accent-blue);
             background: #eff6ff;
-            padding: 1rem;
+            padding: 1.1rem;
             border-radius: 50%;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 3rem;
+            gap: 1.2rem;
+            margin-top: 3.5rem;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             background-color: var(--card-bg);
             color: var(--primary-dark);
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 1.3rem;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .social-links a:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             background-color: var(--accent-blue);
             color: white;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
         }
 
         footer {
@@ -589,18 +609,18 @@
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* ------------------ RESPONSIVE ------------------ */
+        /* ------------------ RESPONSIVE DESIGN ------------------ */
         @media (max-width: 992px) {
             .hero-wrapper {
                 flex-direction: column;
                 text-align: center;
             }
             .hero-text-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.6rem;
             }
             .hero-quote {
                 border-right: none;
-                border-bottom: 2px solid var(--accent-blue);
+                border-bottom: 3px solid var(--accent-blue);
                 padding-bottom: 1rem;
             }
             .hero-actions {
@@ -608,16 +628,23 @@
             }
             .about-card {
                 flex-direction: column;
+                padding: 2.5rem;
             }
         }
 
         @media (max-width: 768px) {
             nav ul {
                 flex-wrap: wrap;
-                gap: 0.8rem;
+                gap: 1rem;
             }
-            nav ul li {
-                margin: 0 0.5rem;
+            .experience-section, .custom-card-section, .contact-info {
+                padding: 2rem 1.5rem;
+            }
+            .timeline {
+                padding-right: 20px;
+            }
+            .timeline-dot {
+                right: -29px;
             }
         }
     </style>
@@ -629,13 +656,13 @@
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-text-content">
-                    <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام & مدير عمليات مالي</span>
+                    <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام & مدير عمليات مالي وإداري</span>
                     <h1>محمود شهاب محمود</h1>
                     <h2>خبير الميزانيات، الامتثال الحكومي والتطوير الإداري</h2>
-                    <p class="hero-quote">"الدقة والاحترافية هما الأساس المتين لبناء ونجاح المؤسسات المالية"</p>
+                    <p class="hero-quote">"الدقة والاحترافية هما الأساس المتين لبناء ونجاح المؤسسات المالية والإدارية"</p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> تواصل معي</a>
-                        <a href="#about" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.2); box-shadow: none;">استكشف سيرتي</a>
+                        <a href="#about" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.25); box-shadow: none;">استكشف سيرتي المهنية</a>
                     </div>
                 </div>
                 <div class="hero-img-container">
@@ -651,8 +678,8 @@
             <ul>
                 <li><a href="#about">من أنا</a></li>
                 <li><a href="#experience">الخبرات المهنية</a></li>
-                <li><a href="#services">خدماتي</a></li>
                 <li><a href="#skills">الكفاءات والشهادات</a></li>
+                <li><a href="#services">خدماتي</a></li>
                 <li><a href="#contact">تواصل معي</a></li>
             </ul>
         </div>
@@ -668,11 +695,11 @@
                         قيادي إداري ومحاسب عام يتمتع بخبرة تمتد لأكثر من 10 سنوات في صياغة وتشغيل الهياكل التنظيمية والمالية للمنشآت المتعددة الفروع (طبية، عقارية، تجارية، ومقاولات).
                     </p>
                     <p>
-                        أتمتّع بسجل حافل في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة، مع تميز استثنائي في هندسة رأس المال البشري؛ يشمل ذلك التخطيط للقوى العاملة، استقطاب الكفاءات وتدريبها، وابتكار حلول مستدامة لسد الفجوات التشغيلية ومعالجة تحديات نطاقات وحماية الأجور لضمان استمرارية الأعمال بأعلى كفاءة.
+                        أتمتّع بسجل حافل في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة العربية السعودية، مع تميز استثنائي في هندسة رأس المال البشري؛ يشمل ذلك التخطيط للقوى العاملة، استقطاب الكفاءات وتدريبها، وابتكار حلول مستدامة لسد الفجوات التشغيلية ومعالجة تحديات نطاقات وحماية الأجور لضمان استمرارية الأعمال بأعلى كفاءة.
                     </p>
                 </div>
                 <div class="about-image-wrapper">
-                    <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب - تخطيط وتنفيذ الإستراتيجيات">
+                    <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب - التخطيط والإدارة الإستراتيجية">
                 </div>
             </div>
 
@@ -683,70 +710,63 @@
                     <h2>الخبرات المهنية الاحترافية</h2>
                 </div>
                 
-                <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب - تحليل أداء ونمو المبيعات" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="flex: 2; min-width: 300px;">
-                        <div class="timeline">
-                          
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">2023 - 2025م</span>
-                              <h3>مسؤول الشؤون الإدارية والحكومية والتأمين</h3>
-                              <h4>مجموعة ألوان العرب للتخصص الطبي</h4>
-                              <ul>
-                                <li>قيادة وتنفيذ عمليات الإمتثال الحكومي وتجديد السجلات والتراخيص الطبية والبلدية لضمان استمرارية التشغيل.</li>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2025م</span>
+                            <h3>مسؤول الشؤون الإدارية والحكومية والتأمين</h3>
+                            <h4>مجموعة ألوان العرب للتخصص الطبي</h4>
+                            <ul>
+                                <li>قيادة وتنفيذ عمليات الإمتثال الحكومي وتجديد السجلات والتراخيص الطبية والبلدية لضمان استمرارية التشغيل دون انقطاع.</li>
                                 <li>إدارة ملف الاستقدام والتأشيرات للكوادر الطبية والإدارية وتنسيق المعاملات مع الهيئة السعودية للتخصصات الصحية ووزارة الصحة.</li>
-                                <li>تطوير وإدارة مطالبات التأمين الطبي وتحديث التعاقدات لرفع مستوى الخدمات المقدمة.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">ديسمبر 2021 - 2025م</span>
-                              <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
-                              <h4>الفرع الرئيسي - مؤسسة متكامل الشمال للتجارة والمقاولات</h4>
-                              <ul>
-                                <li>إعداد وتدقيق القوائم المالية والحسابات الختامية لقطاعات متنوعة (عيادات، عقارات، مراكز طبية).</li>
-                                <li>قيادة التحول الرقمي والإشراف المباشر على المنصات الحكومية (قوى، أبشر أعمال، مقيم، بلدي، سبَل).</li>
-                                <li>إدارة التدفقات النقدية والعمليات البنكية اليومية وتحليل الاعتمادات المالية.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">أغسطس 2018 - ديسمبر 2021م</span>
-                              <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
-                              <h4>مؤسسة مقاولات عامة (العروش)</h4>
-                              <ul>
-                                <li>إدارة مصروفات الأجور والرواتب (Payroll) وتطبيق نظام حماية الأجور بصرامة.</li>
-                                <li>ضبط التكاليف والعمليات التشغيلية والمالية لضمان كفاءة الأداء وتخفيض الهدر.</li>
-                                <li>متابعة الأداء المالي الدوري وتحديث البيانات التنظيمية لتجنب مخاطر إيقاف الخدمات.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">يناير 2016 - أكتوبر 2017م</span>
-                              <h3>محاسب عام</h3>
-                              <h4>مجموعة شركات مودرن هومز (موزع شركة شيبسي)</h4>
-                              <ul>
-                                <li>التوجيه الكامل للدورة المستندية وضبط حسابات الموردين والعملاء.</li>
-                                <li>متابعة الجرد الدوري للمخازن وإعداد تقارير المطابقة.</li>
-                              </ul>
-                            </div>
-                          </div>
-
+                                <li>تطوير وإدارة مطالبات التأمين الطبي وتحديث التعاقدات لرفع مستوى الخدمات المقدمة للمنشأة.</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">ديسمبر 2021 - 2025م</span>
+                            <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
+                            <h4>الفرع الرئيسي - مؤسسة متكامل الشمال للتجارة والمقاولات</h4>
+                            <ul>
+                                <li>إعداد وتدقيق القوائم المالية والحسابات الختامية لقطاعات متنوعة (عيادات، عقارات، مراكز طبية).</li>
+                                <li>قيادة التحول الرقمي والإشراف المباشر على المنصات الحكومية (قوى، أبشر أعمال، مقيم، بلدي، سبَل).</li>
+                                <li>إدارة التدفقات النقدية والعمليات البنكية اليومية وتحليل الاعتمادات المالية والسيولة.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">أغسطس 2018 - ديسمبر 2021م</span>
+                            <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
+                            <h4>مؤسسة مقاولات عامة (العروش)</h4>
+                            <ul>
+                                <li>إدارة مصروفات الأجور والرواتب (Payroll) وتطبيق نظام حماية الأجور بصرامة ودقة عالية.</li>
+                                <li>ضبط التكاليف والعمليات التشغيلية والمالية لضمان كفاءة الأداء وتخفيض الهدر المالي.</li>
+                                <li>متابعة الأداء المالي الدوري وتحديث البيانات التنظيمية لتجنب مخاطر إيقاف الخدمات الحكومية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">يناير 2016 - أكتوبر 2017م</span>
+                            <h3>محاسب عام</h3>
+                            <h4>مجموعة شركات مودرن هومز (موزع شركة شيبسي)</h4>
+                            <ul>
+                                <li>التوجيه الكامل للدورة المستندية وضبط حسابات الموردين والعملاء.</li>
+                                <li>متابعة الجرد الدوري للمخازن وإعداد تقارير المطابقة والحلول المحاسبية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -757,9 +777,9 @@
                     <div class="skill-card">
                         <div class="skill-card-header">
                             <i class="fas fa-users-cog"></i>
-                            <h3>إدارة وتطوير رأس المال البشري</h3>
+                            <h3>إدارة ورأس المال البشري</h3>
                         </div>
-                        <p>إعادة هيكلة المنشآت، التخطيط القومي للقوى العاملة، وضع حلول إستراتيجية لسد أزمات نقص العمالة، وتصميم خطوط التدريب والتأهيل.</p>
+                        <p>إعادة هيكلة المنشآت، التخطيط القومي للقوى العاملة، ووضع حلول إستراتيجية لسد أزمات نقص العمالة وتطوير بيئات العمل.</p>
                     </div>
 
                     <div class="skill-card">
@@ -767,7 +787,7 @@
                             <i class="fas fa-balance-scale"></i>
                             <h3>الامتثال والحوكمة الحكومية</h3>
                         </div>
-                        <p>معالجة معوقات نطاقات، رفع مؤشرات الامتثال، وإدارة منصات (قوى، أبشر، مقيم، بلدي، الزكاة والضريبة والجمارك، الهيئة السعودية للتخصصات الصحية).</p>
+                        <p>رفع مؤشرات الامتثال، إدارة منصات (قوى، أبشر، مقيم، بلدي، الزكاة والضريبة والجمارك، الهيئة السعودية للتخصصات الصحية).</p>
                     </div>
 
                     <div class="skill-card">
@@ -775,7 +795,7 @@
                             <i class="fas fa-chart-pie"></i>
                             <h3>الإدارة المالية والتحليل</h3>
                         </div>
-                        <p>إعداد الميزانيات، القوائم المالية، إدارة التدفقات النقدية، وإعداد الإقرارات الضريبية بكفاءة عالية.</p>
+                        <p>إعداد الميزانيات، القوائم المالية، إدارة التدفقات النقدية، وإعداد الإقرارات الضريبية بكفاءة عالية وفق المعايير.</p>
                     </div>
 
                     <div class="skill-card">
@@ -783,11 +803,11 @@
                             <i class="fas fa-car"></i>
                             <h3>الجاهزية اللوجستية</h3>
                         </div>
-                        <p>امتلاك سيارة خاصة ورخصة سارية المفعول للتحرك الميداني السريع بين الفروع والجهات الرسمية.</p>
+                        <p>امتلاك سيارة خاصة ورخصة سارية المفعول للتحرك الميداني السريع بين الفروع والجهات الرسمية والحكومية.</p>
                     </div>
                 </div>
 
-                <h2 style="font-size: 1.8rem; color: var(--primary-dark); margin: 3rem 0 2rem 0;">المؤهلات الأكاديمية والشهادات</h2>
+                <h2 style="font-size: 1.8rem; color: var(--primary-dark); margin: 3.5rem 0 2rem 0;">المؤهلات الأكاديمية والشهادات</h2>
                 <div class="education-list">
                     <div class="edu-item">
                         <i class="fas fa-user-graduate"></i>
@@ -808,7 +828,7 @@
                     <div class="edu-item">
                         <i class="fas fa-certificate"></i>
                         <div class="edu-details">
-                            <h3>الشهادات التدريبية</h3>
+                            <h3>الشهادات التدريبية والتطويرية</h3>
                             <p>قيادة الحاسب الآلي (ICDL)، مهارات مايكروسوفت أوفيس المتقدمة، منهجية إدارة التغيير وتطوير بيئات العمل، والتسويق العقاري الإلكتروني.</p>
                         </div>
                     </div>
@@ -830,27 +850,27 @@
                 <div class="service-card">
                     <i class="fas fa-file-invoice-dollar"></i>
                     <h3>إدارة الضرائب والزكاة</h3>
-                    <p>تقديم الإقرارات الضريبية وتخطيط الضرائب بما يتوافق مع قوانين هيئة الزكاة والضريبة والجمارك.</p>
+                    <p>تقديم الإقرارات الضريبية والتخطيط المالي بما يتوافق مع قوانين هيئة الزكاة والضريبة والجمارك (ZATCA).</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>التحليل المالي الإستراتيجي</h3>
-                    <p>تقديم تحليل مالي دقيق يساعد في اتخاذ القرارات وتجنب المخاطر واستغلال الفرص الاستثمارية.</p>
+                    <p>تقديم تحليل مالي دقيق يساعد القيادة في اتخاذ القرارات وتجنب المخاطر واستغلال الفرص الاستثمارية.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-coins"></i>
                     <h3>إدارة التكاليف والترشيد</h3>
-                    <p>تحليل وترشيد التكاليف وتحسين الربحية من خلال استراتيجيات خفض التكاليف التشغيلية.</p>
+                    <p>تحليل وترشيد التكاليف وتحسين الربحية من خلال استراتيجيات خفض التكاليف التشغيلية وضبط الهدر.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-tasks"></i>
                     <h3>تأسيس الأنظمة المحاسبية</h3>
-                    <p>تصميم وتطوير أنظمة محاسبية متكاملة تتناسب مع احتياجات المؤسسات باختلاف أحجامها.</p>
+                    <p>تصميم وتطوير أنظمة محاسبية متكاملة ودورات مستندية تتناسب مع احتياجات المنشآت باختلاف أحجامها.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-clipboard-check"></i>
                     <h3>التدقيق والامتثال الحكومي</h3>
-                    <p>مراجعة دقة السجلات المالية وضمان الالتزام الشامل بكافة المنصات الحكومية وأنظمة العمل.</p>
+                    <p>مراجعة دقة السجلات المالية وضمان الالتزام الشامل بكافة المنصات الحكومية وأنظمة العمل والتأشيرات.</p>
                 </div>
             </div>
         </div>
@@ -860,7 +880,7 @@
     <section class="cta">
         <div class="container">
             <h2>هل تبحث عن إدارة مالية وإدارية محترفة لمؤسستك؟</h2>
-            <p>أنا هنا لمساعدتك في ضبط أمورك المالية والإدارية وتحقيق أعلى مستويات النمو والامتثال!</p>
+            <p>أنا هنا لمساعدتك في ضبط أداء منشأتك المالي والإداري وتحقيق أعلى مستويات النمو والامتثال التنظيمي!</p>
             <a href="#contact" class="btn"><i class="fas fa-envelope"></i> ابدأ التواصل الآن</a>
         </div>
     </section>
@@ -888,18 +908,18 @@
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">الموقع</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">الموقع الحالي</p>
                         <p style="font-weight: 700; color: var(--primary-dark);">المملكة العربية السعودية</p>
                     </div>
                 </div>
             </div>
 
             <div class="social-links">
-                <a href="https://www.facebook.com/share/155XKrP6WP/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/1mahmoudshehab2?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/mahmoud-shehab-681266319" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/1mahmoud_shehab" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/qr/26ZTUU2PFM7VF1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/155XKrP6WP/?mibextid=wwXIfr" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/1mahmoudshehab2?s=21" target="_blank" title="تويتر / منصة إكس"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/mahmoud-shehab-681266319" target="_blank" title="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/1mahmoud_shehab" target="_blank" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/qr/26ZTUU2PFM7VF1" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>

@@ -60,17 +60,26 @@
             pointer-events: none;
         }
 
+        .hero-top-bar {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
         .hero-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 2rem;
-            min-height: auto;
         }
 
         .hero-text-content {
             flex: 1;
             z-index: 2;
+        }
+
+        .hero-badge-container {
+            margin-bottom: 1rem;
         }
 
         .hero-badge {
@@ -80,9 +89,10 @@
             color: var(--cyan-accent);
             padding: 0.3rem 1rem;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-left: 0.4rem;
+            margin-bottom: 0.4rem;
             backdrop-filter: blur(5px);
         }
 
@@ -92,47 +102,109 @@
             letter-spacing: -0.5px;
             line-height: 1.2;
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #ffffff 0%, #e2e8f0 50%, var(--cyan-accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff;
         }
 
         .hero-text-content h2 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #94a3b8;
             font-weight: 500;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        .hero-quote {
+        .hero-pitch {
+            background: rgba(255, 255, 255, 0.05);
+            border-right: 4px solid var(--cyan-accent);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-pitch h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .hero-pitch p {
             font-size: 1rem;
             color: #cbd5e1;
-            border-right: 3px solid var(--accent-blue);
-            padding-right: 1rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
+            line-height: 1.5;
         }
 
-        .hero-actions {
+        .hero-profile-side {
+            flex: 0 0 380px;
             display: flex;
-            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+            z-index: 2;
         }
 
         .hero-img-container {
-            flex: 0 0 360px;
-            position: relative;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            z-index: 2;
         }
 
         .hero-full-img {
             width: 100%;
-            max-height: 500px;
+            max-height: 380px;
             object-fit: contain;
             filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
-            transition: transform 0.4s ease;
+            border-radius: 16px;
+        }
+
+        .header-contact-card {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-contact-card h4 {
+            color: var(--cyan-accent);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+        }
+
+        .header-contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .header-contact-item i {
+            color: var(--accent-blue);
+            width: 18px;
+            text-align: center;
+        }
+
+        .header-contact-item a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-contact-item a:hover {
+            color: var(--cyan-accent);
         }
 
         /* ------------------ NAVIGATION ------------------ */
@@ -430,12 +502,18 @@
             gap: 0.5rem;
             background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             color: white;
-            padding: 0.6rem 1.5rem;
+            padding: 0.61rem 1.5rem;
             font-size: 0.95rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
 
         .cta {
@@ -504,6 +582,13 @@
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-blue);
+            color: white;
         }
 
         footer {
@@ -521,27 +606,26 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .hero-top-bar {
+                justify-content: center;
+            }
             .hero-text-content h1 {
                 font-size: 2.2rem;
             }
-            .hero-quote {
+            .hero-pitch {
                 border-right: none;
-                border-bottom: 2px solid var(--accent-blue);
-                padding-bottom: 0.8rem;
+                border-bottom: 3px solid var(--cyan-accent);
             }
-            .hero-actions {
-                justify-content: center;
-            }
-            .hero-img-container {
+            .hero-profile-side {
                 flex: 0 0 auto;
                 width: 100%;
-                max-width: 320px;
+                max-width: 360px;
             }
         }
 
         @media (max-width: 600px) {
             header {
-                padding: 2rem 0 1rem 0;
+                padding: 1.5rem 0 1rem 0;
             }
             section {
                 padding: 2rem 0;
@@ -560,7 +644,7 @@
                 font-size: 1.1rem;
             }
             .hero-badge {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
             }
             nav ul {
                 flex-wrap: wrap;
@@ -574,7 +658,6 @@
                 font-size: 0.85rem;
             }
             
-            /* العرض في الجوال بخانات متجاورة لتقليل التمرير الطويل */
             .skills-grid, .services-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.8rem;
@@ -597,6 +680,43 @@
                 padding: 0.8rem;
             }
         }
+
+        /* ------------------ PRINT OPTIMIZATION ------------------ */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            header {
+                background: #0b1329 !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+            header::before {
+                display: none !important;
+            }
+            .hero-badge {
+                backdrop-filter: none !important;
+                background: #1e3a8a !important;
+                color: #ffffff !important;
+            }
+            .hero-text-content h1 {
+                color: #ffffff !important;
+                background: none !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .hero-full-img {
+                filter: none !important;
+            }
+            nav, .cta, .hero-top-bar {
+                display: none !important;
+            }
+            .about-card, .experience-section, .custom-card-section, .contact-info, .service-card, .skill-card {
+                box-shadow: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -604,20 +724,31 @@
     <!-- HERO SECTION / HEADER -->
     <header>
         <div class="container">
+            <!-- زر التواصل في أعلى الصفحة يميناً -->
+            <div class="hero-top-bar">
+                <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> ابدأ التواصل الآن</a>
+            </div>
+
             <div class="hero-wrapper">
+                <!-- الجزء النصي والتسويقي -->
                 <div class="hero-text-content">
-                    <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام & مدير عمليات مالي</span>
+                    <div class="hero-badge-container">
+                        <span class="hero-badge"><i class="fas fa-check-circle"></i> مدير تشغيل</span>
+                        <span class="hero-badge"><i class="fas fa-check-circle"></i> مدير عمليات</span>
+                        <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام</span>
+                    </div>
+
                     <h1>محمود شهاب محمود</h1>
                     <h2>خبير الميزانيات، الامتثال الحكومي والتطوير الإداري</h2>
-                    <p class="hero-quote">"الدقة والاحترافية هما الأساس المتين لبناء ونجاح المؤسسات المالية"</p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> تواصل معي</a>
-                        <a href="#about" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.2); box-shadow: none;">استكشف سيرتي</a>
+
+                    <!-- النص الدعائي والاستفسار المباشر -->
+                    <div class="hero-pitch">
+                        <h3>هل تبحث عن إدارة مالية وإدارية محترفة لمؤسستك؟</h3>
+                        <p>أنا هنا لمساعدتك في ضبط أمورك المالية والإدارية وتحقيق أعلى مستويات النمو!</p>
                     </div>
                 </div>
-                <!-- الصورة الرئيسية فقط (محافظ عليها بدون تعديل بالحجم أو القص) -->
-                <div class="hero-img-container">
-                    <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب محمود" class="hero-full-img">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -643,9 +774,7 @@
             <div class="about-card">
                 <div class="about-text-content">
                     <p>
-                        قيادي إداري ومحاسب عام يتمتع بخبرة تمتد لأكثر من 10 سنوات في صياغة وتشغيل الهياكل التنظيمية والمالية للمنشآت المتعددة الفروع (طبية، عقارية، تجارية، ومقاولات).
-                    </p>
-                    <p>
+                        قيادي إداري ومحاسب عام يتمتع بخبرة تمتد لأكثر من 10 سنوات في صياغة وتشغيل الهياكل التنظيمية والمالية للمنشآت (طبية، عقارية، تجارية، ومقاولات).
                         أتمتّع بسجل حافل في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة، مع تميز استثنائي في هندسة رأس المال البشري؛ يشمل ذلك التخطيط للقوى العاملة، استقطاب الكفاءات وتدريبها، وابتكار حلول مستدامة لسد الفجوات التشغيلية ومعالجة تحديات نطاقات وحماية الأجور لضمان استمرارية الأعمال بأعلى كفاءة.
                     </p>
                 </div>
@@ -665,7 +794,7 @@
                     <div class="timeline-content">
                       <span class="timeline-date">2023 - 2025م</span>
                       <h3>مسؤول الشؤون الإدارية والحكومية والتأمين</h3>
-                      <h4>مجموعة ألوان العرب للتخصص الطبي</h4>
+                      <h4>الفرع الفرعي-مجمع دار القريات التخصص الطبي</h4>
                       <ul>
                         <li>قيادة وتنفيذ عمليات الإمتثال الحكومي وتجديد السجلات والتراخيص الطبية والبلدية لضمان استمرارية التشغيل.</li>
                         <li>إدارة ملف الاستقدام والتأشيرات للكوادر الطبية والإدارية وتنسيق المعاملات مع الهيئة السعودية للتخصصات الصحية ووزارة الصحة.</li>
@@ -680,6 +809,8 @@
                       <span class="timeline-date">ديسمبر 2021 - 2025م</span>
                       <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
                       <h4>الفرع الرئيسي - مؤسسة متكامل الشمال للتجارة والمقاولات</h4>
+                      <h4>الفرع الفرعي-مؤسسة متكامل الشمال الزراعية</h4>
+
                       <ul>
                         <li>إعداد وتدقيق القوائم المالية والحسابات الختامية لقطاعات متنوعة (عيادات، عقارات، مراكز طبية).</li>
                         <li>قيادة التحول الرقمي والإشراف المباشر على المنصات الحكومية (قوى، أبشر أعمال، مقيم، بلدي، سبَل).</li>
@@ -693,9 +824,12 @@
                     <div class="timeline-content">
                       <span class="timeline-date">أغسطس 2018 - ديسمبر 2021م</span>
                       <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
-                      <h4>مؤسسة مقاولات عامة (العروش)</h4>
+                      <h4>مؤسسة مقاولات عامة</h4>
+                      <h4>الفرع الفرعي-مركز فورسيزون للعناية بالرجل عدد 6 فروع</h4>
+                      <h4>الفرع الفرعي-لاونج الورود</h4>
+                      <h4>الفرع الفرعي-لاونج النافورة</h4>
                       <ul>
-                        <li>إدارة مصروفات الأجور والرواتب (Payroll) وتطبيق نظام حماية الأجور بصرامة.</li>
+                        <li>إدارة مصروفات الأجور والرواتب وتطبيق نظام حماية الأجور بصرامة.</li>
                         <li>ضبط التكاليف والعمليات التشغيلية والمالية لضمان كفاءة الأداء وتخفيض الهدر.</li>
                         <li>متابعة الأداء المالي الدوري وتحديث البيانات التنظيمية لتجنب مخاطر إيقاف الخدمات.</li>
                       </ul>
@@ -872,10 +1006,9 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; محمود شهاب محمود - كافة الحقوق محفوظة 2026</p>
+            <p>جميع الحقوق محفوظة © محمود شهاب محمود</p>
         </div>
     </footer>
 

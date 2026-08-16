@@ -209,6 +209,100 @@
         .timeline-content ul li {
             margin-bottom: 0.4rem;
         }
+
+        /* تنسيقات أقسام المهارات والشهادات الجديدة */
+        .custom-card-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .custom-card-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-right: 4px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-card-header i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .skill-card-header h3 {
+            font-size: 1.15rem;
+            color: var(--primary-color);
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: var(--dark-color);
+            line-height: 1.5;
+        }
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .edu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background-color: var(--light-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .edu-item i {
+            font-size: 1.6rem;
+            color: var(--secondary-color);
+            margin-top: 0.2rem;
+        }
+
+        .edu-details h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .edu-details p {
+            font-size: 0.95rem;
+            color: var(--dark-color);
+        }
         
         .services {
             background-color: #f1f5f9;
@@ -401,11 +495,11 @@
                         قيادي إداري ومحاسب عام يتمتع بخبرة تمتد لأكثر من 10 سنوات في صياغة وتشغيل الهياكل التنظيمية والمالية للمنشآت المتعددة الفروع (طبية، عقارية، تجارية، ومقاولات). يمتلك سجلًا حافلاً في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة، مع تميز استثنائي في هندسة رأس المال البشري؛ يشمل ذلك التخطيط للقوى العاملة، استقطاب الكفاءات الطبية والمهنية وتدريبها، وابتكار حلول مستدامة لسد الفجوات التشغيلية ومعالجة تحديات نطاقات وحماية الأجور لضمان استمرارية الأعمال بأعلى كفاءة.
                     </p>
 
+                    <!-- قسم الخبرات المهنية -->
                     <section class="experience-section">
                         <h2>الخبرات المهنية</h2>
                         <div class="timeline">
                           
-                          <!-- الخبرة الأولى -->
                           <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -420,7 +514,6 @@
                             </div>
                           </div>
 
-                          <!-- الخبرة الثانية -->
                           <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -435,7 +528,6 @@
                             </div>
                           </div>
 
-                          <!-- الخبرة الثالثة -->
                           <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -450,7 +542,6 @@
                             </div>
                           </div>
 
-                          <!-- الخبرة الرابعة -->
                           <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
@@ -467,20 +558,74 @@
                         </div>
                     </section>
 
-                    <div class="section-title" style="margin-top: 2rem;">الكفاءات والمهارات القيادية والإستراتيجية</div>
-                    <ul>
-                        <li><strong>إدارة وتطوير رأس المال البشري:</strong> إعادة هيكلة المنشآت، التخطيط القومي للقوى العاملة، وضع حلول إستراتيجية لسد أزمات نقص العمالة، وتصميم خطوط التدريب والتأهيل السريع للموظفين الجدد.</li>
-                        <li><strong>الامتثال والحوكمة الحكومية:</strong> معالجة معوقات نطاقات، رفع مؤشرات الامتثال، وإدارة منصات (قوى، أبشر، مقيم، بلدي، الزكاة والضريبة والجمارك، الهيئة السعودية للتخصصات الصحية).</li>
-                        <li><strong>الإدارة المالية والتحليل:</strong> إعداد الميزانيات، القوائم المالية، إدارة التدفقات النقدية، وإعداد الإقرارات الضريبية.</li>
-                        <li><strong>الجاهزية اللوجستية:</strong> امتلاك سيارة خاصة ورخصة سارية المفعول للتحرك الميداني السريع بين الفروع والجهات الرسمية.</li>
-                    </ul>
+                    <!-- قسم الكفاءات والمهارات القيادية والإستراتيجية -->
+                    <section class="custom-card-section">
+                        <h2>الكفاءات والمهارات القيادية والإستراتيجية</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-card-header">
+                                    <i class="fas fa-users-cog"></i>
+                                    <h3>إدارة وتطوير رأس المال البشري</h3>
+                                </div>
+                                <p>إعادة هيكلة المنشآت، التخطيط القومي للقوى العاملة، وضع حلول إستراتيجية لسد أزمات نقص العمالة، وتصميم خطوط التدريب والتأهيل السريع للموظفين الجدد.</p>
+                            </div>
 
-                    <div class="section-title" style="margin-top: 2rem;">المؤهلات الأكاديمية والشهادات</div>
-                    <ul>
-                        <li><strong>دبلومة في المحاسبة</strong> | جامعة أسيوط</li>
-                        <li><strong>بكالوريوس التجارة – قسم المحاسبة</strong> | جامعة أسيوط (يونيو 2015م)</li>
-                        <li><strong>الشهادات التدريبية:</strong> قيادة الحاسب الآلي (ICDL)، مهارات مايكروسوفت أوفيس المتقدمة، منهجية إدارة التغيير وتطوير بيئات العمل، والتسويق العقاري الإلكتروني.</li>
-                    </ul>
+                            <div class="skill-card">
+                                <div class="skill-card-header">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <h3>الامتثال والحوكمة الحكومية</h3>
+                                </div>
+                                <p>معالجة معوقات نطاقات، رفع مؤشرات الامتثال، وإدارة منصات (قوى، أبشر، مقيم، بلدي، الزكاة والضريبة والجمارك، الهيئة السعودية للتخصصات الصحية).</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-card-header">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <h3>الإدارة المالية والتحليل</h3>
+                                </div>
+                                <p>إعداد الميزانيات، القوائم المالية، إدارة التدفقات النقدية، وإعداد الإقرارات الضريبية بكفاءة عالية.</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-card-header">
+                                    <i class="fas fa-car"></i>
+                                    <h3>الجاهزية اللوجستية</h3>
+                                </div>
+                                <p>امتلاك سيارة خاصة ورخصة سارية المفعول للتحرك الميداني السريع بين الفروع والجهات الرسمية.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- قسم المؤهلات الأكاديمية والشهادات -->
+                    <section class="custom-card-section">
+                        <h2>المؤهلات الأكاديمية والشهادات</h2>
+                        <div class="education-list">
+                            <div class="edu-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <div class="edu-details">
+                                    <h3>دبلومة في المحاسبة</h3>
+                                    <p>جامعة أسيوط</p>
+                                </div>
+                            </div>
+
+                            <div class="edu-item">
+                                <i class="fas fa-university"></i>
+                                <div class="edu-details">
+                                    <h3>بكالوريوس التجارة – قسم المحاسبة</h3>
+                                    <p>جامعة أسيوط (يونيو 2015م)</p>
+                                </div>
+                            </div>
+
+                            <div class="edu-item">
+                                <i class="fas fa-certificate"></i>
+                                <div class="edu-details">
+                                    <h3>الشهادات التدريبية</h3>
+                                    <p>قيادة الحاسب الآلي (ICDL)، مهارات مايكروسوفت أوفيس المتقدمة، منهجية إدارة التغيير وتطوير بيئات العمل، والتسويق العقاري الإلكتروني.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
                 <div class="about-image">
                     <img src="https://img.freepik.com/free-photo/accountant-work-with-calculator-laptop-office_1423-120.jpg" alt="محاسب محترف">

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محمود شهاب محمود - محاسب عام</title>
-     <title> مدير تشغيل وعمليات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
@@ -93,9 +92,7 @@
             letter-spacing: -0.5px;
             line-height: 1.2;
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #ffffff 0%, #e2e8f0 50%, var(--cyan-accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff; /* تم استبدال background-clip بإسناد لون أبيض مباشر لحل مشكلة التصدير لـ PDF */
         }
 
         .hero-text-content h2 {
@@ -598,6 +595,43 @@
                 padding: 0.8rem;
             }
         }
+
+        /* ------------------ PRINT OPTIMIZATION (PRINT TO PDF FIXED) ------------------ */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            header {
+                background: #0b1329 !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+            header::before {
+                display: none !important;
+            }
+            .hero-badge {
+                backdrop-filter: none !important;
+                background: #1e3a8a !important;
+                color: #ffffff !important;
+            }
+            .hero-text-content h1 {
+                color: #ffffff !important;
+                background: none !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .hero-full-img {
+                filter: none !important;
+            }
+            nav, .cta, .hero-actions {
+                display: none !important;
+            }
+            .about-card, .experience-section, .custom-card-section, .contact-info, .service-card, .skill-card {
+                box-shadow: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -873,18 +907,13 @@
 
             <div class="social-links">
                 <a href="https://www.facebook.com/share/155XKrP6WP/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/1mahmoudshehab2?s=21" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/mahmoud-shehab-681266319" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/1mahmoud_shehab" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/qr/26ZTUU2PFM7VF1" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; محمود شهاب محمود - كافة الحقوق محفوظة 2026</p>
+            <p>جميع الحقوق محفوظة &copy; محمود شهاب محمود</p>
         </div>
     </footer>
 

@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>محمود شهاب محمود - محاسب عام ومدير عمليات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -28,14 +28,14 @@
         body {
             background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
         /* ------------------ HERO / HEADER SECTION ------------------ */
@@ -43,29 +43,15 @@
             background: linear-gradient(135deg, #0b1329 0%, #1a233a 50%, #0f172a 100%);
             position: relative;
             color: white;
-            padding: 4rem 0 2rem 0;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
+            padding: 1.5rem 0 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .hero-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 3rem;
-            min-height: 480px;
+            gap: 1.5rem;
         }
 
         .hero-text-content {
@@ -78,127 +64,92 @@
             background: rgba(37, 99, 235, 0.2);
             border: 1px solid rgba(6, 182, 212, 0.4);
             color: var(--cyan-accent);
-            padding: 0.4rem 1.2rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 1.2rem;
-            backdrop-filter: blur(5px);
+            margin-bottom: 0.5rem;
         }
 
         .hero-text-content h1 {
-            font-size: 3.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
             line-height: 1.2;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             background: linear-gradient(90deg, #ffffff 0%, #e2e8f0 50%, var(--cyan-accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero-text-content h2 {
-            font-size: 1.6rem;
+            font-size: 0.95rem;
             color: #94a3b8;
             font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-quote {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            border-right: 3px solid var(--accent-blue);
-            padding-right: 1rem;
-            margin-bottom: 2rem;
-            font-style: italic;
+            margin-bottom: 0.8rem;
         }
 
         .hero-actions {
             display: flex;
-            gap: 1rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .hero-img-container {
-            flex: 0 0 380px;
-            position: relative;
+            flex: 0 0 100px;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
-            z-index: 2;
         }
 
         .hero-full-img {
-            width: 100%;
-            max-height: 520px;
-            object-fit: contain;
-            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
-            transition: transform 0.4s ease;
-        }
-
-        .hero-full-img:hover {
-            transform: scale(1.02);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--cyan-accent);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         /* ------------------ NAVIGATION ------------------ */
         nav {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.98);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             list-style: none;
-            padding: 1rem 0;
-        }
-
-        nav ul li {
-            margin: 0 1.5rem;
+            padding: 0.6rem 0;
         }
 
         nav ul li a {
             color: #e2e8f0;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding-bottom: 5px;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
         }
 
-        nav ul li a:hover {
+        nav ul li a i {
+            font-size: 1rem;
             color: var(--cyan-accent);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 0%;
-            height: 2px;
-            background-color: var(--cyan-accent);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
         }
 
         /* ------------------ SECTIONS COMMON ------------------ */
         section {
-            padding: 4.5rem 0;
+            padding: 1.5rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--primary-dark);
             position: relative;
@@ -207,91 +158,49 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 70px;
-            height: 4px;
+            width: 40px;
+            height: 3px;
             background: linear-gradient(90deg, var(--accent-blue), var(--cyan-accent));
-            margin: 0.8rem auto 0;
+            margin: 0.3rem auto 0;
             border-radius: 2px;
         }
 
         /* ------------------ ABOUT SECTION ------------------ */
         .about-card {
             background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .about-text-content {
-            flex: 1.2;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            padding: 1.2rem;
         }
 
         .about-text-content p {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #334155;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
         }
 
-        .about-image-wrapper {
-            flex: 0.8;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .about-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-image-wrapper:hover img {
-            transform: scale(1.04);
+        .about-text-content p:last-child {
+            margin-bottom: 0;
         }
 
         /* ------------------ EXPERIENCE TIMELINE ------------------ */
         .experience-section {
             background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 3rem;
-            margin-top: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .exp-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 1rem;
-        }
-
-        .exp-header i {
-            font-size: 2rem;
-            color: var(--accent-blue);
-        }
-
-        .exp-header h2 {
-            font-size: 1.8rem;
-            color: var(--primary-dark);
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
         .timeline {
             position: relative;
-            padding-right: 25px;
-            border-right: 3px solid #e2e8f0;
+            padding-right: 15px;
+            border-right: 2px solid #e2e8f0;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .timeline-item:last-child {
@@ -300,142 +209,130 @@
 
         .timeline-dot {
             position: absolute;
-            right: -34px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
+            right: -20px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
             background-color: var(--accent-blue);
-            border: 4px solid #ffffff;
-            box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+            border: 2px solid #ffffff;
             border-radius: 50%;
         }
 
         .timeline-content {
             background-color: #f8fafc;
-            padding: 1.8rem;
-            border-radius: 12px;
+            padding: 0.8rem;
+            border-radius: 8px;
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateX(-5px);
         }
 
         .timeline-date {
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
+            background: var(--accent-blue);
             color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 0.1rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
             font-weight: 700;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.4rem;
         }
 
         .timeline-content h3 {
             color: var(--primary-dark);
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
         }
 
         .timeline-content h4 {
             color: var(--accent-blue);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
         .timeline-content ul {
-            padding-right: 1.2rem;
+            padding-right: 1rem;
         }
 
         .timeline-content ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             color: #475569;
+            font-size: 0.8rem;
         }
 
         /* ------------------ SKILLS & EDUCATION CARDS ------------------ */
         .custom-card-section {
             background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 3rem;
-            margin-top: 3rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
         }
 
         .skill-card {
             background-color: #f8fafc;
-            border-radius: 12px;
-            padding: 1.8rem;
+            border-radius: 8px;
+            padding: 0.8rem;
             border: 1px solid #e2e8f0;
-            border-top: 4px solid var(--accent-blue);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            background-color: #ffffff;
+            border-top: 3px solid var(--accent-blue);
         }
 
         .skill-card-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .skill-card-header i {
-            font-size: 1.8rem;
+            font-size: 1rem;
             color: var(--accent-blue);
         }
 
         .skill-card-header h3 {
-            font-size: 1.15rem;
+            font-size: 0.85rem;
             color: var(--primary-dark);
         }
 
         .skill-card p {
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             color: #64748b;
+            line-height: 1.4;
         }
 
         .education-list {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 0.6rem;
         }
 
         .edu-item {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 0.8rem;
             background-color: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 12px;
+            padding: 0.8rem;
+            border-radius: 8px;
             border: 1px solid #e2e8f0;
-            border-right: 5px solid var(--cyan-accent);
+            border-right: 4px solid var(--cyan-accent);
         }
 
         .edu-item i {
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: var(--cyan-accent);
         }
 
         .edu-details h3 {
-            font-size: 1.2rem;
+            font-size: 0.85rem;
             color: var(--primary-dark);
         }
 
         .edu-details p {
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             color: #64748b;
         }
 
@@ -446,175 +343,113 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
         }
 
         .service-card {
             background-color: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
+            padding: 1rem;
+            border-radius: 10px;
             border: 1px solid #e2e8f0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         .service-card i {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: var(--accent-blue);
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.4rem;
         }
 
         .service-card h3 {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.3rem;
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 0.85rem;
         }
 
         .service-card p {
             color: #64748b;
-            font-size: 0.95rem;
+            font-size: 0.75rem;
+            line-height: 1.3;
         }
 
         /* ------------------ BUTTONS & CTA ------------------ */
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
             background: linear-gradient(135deg, var(--accent-blue), var(--primary-blue));
             color: white;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        .cta {
-            text-align: center;
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: white;
-        }
-
-        .cta h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .cta .btn {
-            background: white;
-            color: var(--primary-dark);
         }
 
         /* ------------------ CONTACT & FOOTER ------------------ */
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
             background: var(--card-bg);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 1.2rem;
+            border-radius: 12px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 1.2rem;
+            gap: 0.8rem;
         }
 
         .contact-item i {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             color: var(--accent-blue);
             background: #eff6ff;
-            padding: 1rem;
+            padding: 0.6rem;
             border-radius: 50%;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 3rem;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
+            width: 38px;
+            height: 38px;
             background-color: var(--card-bg);
             color: var(--primary-dark);
             border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-4px);
-            background-color: var(--accent-blue);
-            color: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            font-size: 1rem;
+            text-decoration: none;
         }
 
         footer {
             background-color: var(--primary-dark);
             color: #94a3b8;
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 1rem 0;
+            font-size: 0.75rem;
         }
 
-        /* ------------------ RESPONSIVE ------------------ */
-        @media (max-width: 992px) {
-            .hero-wrapper {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-text-content h1 {
-                font-size: 2.5rem;
-            }
-            .hero-quote {
-                border-right: none;
-                border-bottom: 2px solid var(--accent-blue);
-                padding-bottom: 1rem;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .about-card {
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-wrap: wrap;
-                gap: 0.8rem;
-            }
-            nav ul li {
-                margin: 0 0.5rem;
-            }
+        /* ------------------ DESKTOP ENHANCEMENTS ------------------ */
+        @media (min-width: 768px) {
+            header { padding: 3rem 0; }
+            .hero-img-container { flex: 0 0 200px; }
+            .hero-full-img { width: 180px; height: 180px; }
+            .hero-text-content h1 { font-size: 2.8rem; }
+            .hero-text-content h2 { font-size: 1.3rem; }
+            .skills-grid, .services-grid { grid-template-columns: repeat(4, 1fr); }
+            .contact-info { grid-template-columns: repeat(3, 1fr); }
+            section { padding: 3rem 0; }
         }
     </style>
 </head>
@@ -625,13 +460,11 @@
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-text-content">
-                    <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام & مدير عمليات مالي</span>
-                    <h1>محمود شهاب محمود</h1>
-                    <h2>خبير الميزانيات، الامتثال الحكومي والتطوير الإداري</h2>
-                    <p class="hero-quote">"الدقة والاحترافية هما الأساس المتين لبناء ونجاح المؤسسات المالية"</p>
+                    <span class="hero-badge"><i class="fas fa-check-circle"></i> محاسب عام & مدير عمليات</span>
+                    <h1>محمود شهاب</h1>
+                    <h2>خبير الميزانيات والامتثال الحكومي</h2>
                     <div class="hero-actions">
                         <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i> تواصل معي</a>
-                        <a href="#about" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.2); box-shadow: none;">استكشف سيرتي</a>
                     </div>
                 </div>
                 <div class="hero-img-container">
@@ -645,11 +478,11 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#about">من أنا</a></li>
-                <li><a href="#experience">الخبرات المهنية</a></li>
-                <li><a href="#services">خدماتي</a></li>
-                <li><a href="#skills">الكفاءات والشهادات</a></li>
-                <li><a href="#contact">تواصل معي</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i>من أنا</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i>الخبرات</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i>الخدمات</a></li>
+                <li><a href="#skills"><i class="fas fa-award"></i>المهارات</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>التواصل</a></li>
             </ul>
         </div>
     </nav>
@@ -664,148 +497,109 @@
                         قيادي إداري ومحاسب عام يتمتع بخبرة تمتد لأكثر من 10 سنوات في صياغة وتشغيل الهياكل التنظيمية والمالية للمنشآت المتعددة الفروع (طبية، عقارية، تجارية، ومقاولات).
                     </p>
                     <p>
-                        أتمتّع بسجل حافل في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة، مع تميز استثنائي في هندسة رأس المال البشري؛ يشمل ذلك التخطيط للقوى العاملة، استقطاب الكفاءات وتدريبها، وابتكار حلول مستدامة لسد الفجوات التشغيلية ومعالجة تحديات نطاقات وحماية الأجور لضمان استمرارية الأعمال بأعلى كفاءة.
+                        متخصص في تحقيق الامتثال التنظيمي الشامل عبر المنصات الرقمية الحكومية بالمملكة، وتطوير رأس المال البشري وسد الفجوات التشغيلية لضمان استمرارية الأعمال.
                     </p>
                 </div>
-                <div class="about-image-wrapper">
-                    <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب - تخطيط وتنفيذ الإستراتيجيات">
-                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- EXPERIENCE SECTION -->
-            <div id="experience" class="experience-section">
-                <div class="exp-header">
-                    <i class="fas fa-briefcase"></i>
-                    <h2>الخبرات المهنية الاحترافية</h2>
-                </div>
-                
-                <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <img src="photo_5769588538801328084_y.jpg" alt="محمود شهاب - تحليل أداء ونمو المبيعات" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                    </div>
-                    <div style="flex: 2; min-width: 300px;">
-                        <div class="timeline">
-                          
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">2023 - 2025م</span>
-                              <h3>مسؤول الشؤون الإدارية والحكومية والتأمين</h3>
-                              <h4>مجموعة ألوان العرب للتخصص الطبي</h4>
-                              <ul>
-                                <li>قيادة وتنفيذ عمليات الإمتثال الحكومي وتجديد السجلات والتراخيص الطبية والبلدية لضمان استمرارية التشغيل.</li>
-                                <li>إدارة ملف الاستقدام والتأشيرات للكوادر الطبية والإدارية وتنسيق المعاملات مع الهيئة السعودية للتخصصات الصحية ووزارة الصحة.</li>
-                                <li>تطوير وإدارة مطالبات التأمين الطبي وتحديث التعاقدات لرفع مستوى الخدمات المقدمة.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">ديسمبر 2021 - 2025م</span>
-                              <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
-                              <h4>الفرع الرئيسي - مؤسسة متكامل الشمال للتجارة والمقاولات</h4>
-                              <ul>
-                                <li>إعداد وتدقيق القوائم المالية والحسابات الختامية لقطاعات متنوعة (عيادات، عقارات، مراكز طبية).</li>
-                                <li>قيادة التحول الرقمي والإشراف المباشر على المنصات الحكومية (قوى، أبشر أعمال، مقيم، بلدي، سبَل).</li>
-                                <li>إدارة التدفقات النقدية والعمليات البنكية اليومية وتحليل الاعتمادات المالية.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">أغسطس 2018 - ديسمبر 2021م</span>
-                              <h3>محاسب عام ومدير العمليات الإدارية والخدمات</h3>
-                              <h4>مؤسسة مقاولات عامة (العروش)</h4>
-                              <ul>
-                                <li>إدارة مصروفات الأجور والرواتب (Payroll) وتطبيق نظام حماية الأجور بصرامة.</li>
-                                <li>ضبط التكاليف والعمليات التشغيلية والمالية لضمان كفاءة الأداء وتخفيض الهدر.</li>
-                                <li>متابعة الأداء المالي الدوري وتحديث البيانات التنظيمية لتجنب مخاطر إيقاف الخدمات.</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <span class="timeline-date">يناير 2016 - أكتوبر 2017م</span>
-                              <h3>محاسب عام</h3>
-                              <h4>مجموعة شركات مودرن هومز (موزع شركة شيبسي)</h4>
-                              <ul>
-                                <li>التوجيه الكامل للدورة المستندية وضبط حسابات الموردين والعملاء.</li>
-                                <li>متابعة الجرد الدوري للمخازن وإعداد تقارير المطابقة.</li>
-                              </ul>
-                            </div>
-                          </div>
-
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" style="padding-top: 0;">
+        <div class="container">
+            <div class="experience-section">
+                <h2 class="section-title">الخبرات المهنية</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2025م</span>
+                            <h3>مسؤول الشؤون الإدارية والحكومية والتأمين</h3>
+                            <h4>مجموعة ألوان العرب للتخصص الطبي</h4>
+                            <ul>
+                                <li>إدارة الامتثال الحكومي وتجديد السجلات والتراخيص.</li>
+                                <li>إدارة الاستقدام والتنسيق مع الهيئة السعودية للتخصصات الصحية.</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - 2025م</span>
+                            <h3>محاسب عام ومدير العمليات الإدارية</h3>
+                            <h4>مؤسسة متكامل الشمال للتجارة والمقاولات</h4>
+                            <ul>
+                                <li>إعداد القوائم المالية والإشراف على المنصات (قوى، أبشر، مقيم، بلدي).</li>
+                                <li>إدارة التدفقات النقدية والعمليات البنكية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2018 - 2021م</span>
+                            <h3>محاسب عام ومدير العمليات</h3>
+                            <h4>مؤسسة مقاولات عامة (العروش)</h4>
+                            <ul>
+                                <li>إدارة الأجور وتطبيق نظام حماية الأجور وضبط التكاليف.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- SKILLS & EDUCATION SECTION -->
-            <div id="skills" class="custom-card-section">
-                <h2 style="font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 2rem;">الكفاءات والمهارات الإستراتيجية</h2>
-                <div class="skills-grid">
+    <!-- SKILLS & EDUCATION SECTION -->
+    <section id="skills" style="padding-top: 0;">
+        <div class="container">
+            <div class="custom-card-section">
+                <h2 class="section-title">المهارات والمؤهلات</h2>
+                
+                <div class="skills-grid" style="margin-bottom: 1.2rem;">
                     <div class="skill-card">
                         <div class="skill-card-header">
                             <i class="fas fa-users-cog"></i>
-                            <h3>إدارة وتطوير رأس المال البشري</h3>
+                            <h3>إدارة البشرية</h3>
                         </div>
-                        <p>إعادة هيكلة المنشآت، التخطيط القومي للقوى العاملة، وضع حلول إستراتيجية لسد أزمات نقص العمالة، وتصميم خطوط التدريب والتأهيل.</p>
+                        <p>هيكلة المنشآت وسد أزمات العمالة.</p>
                     </div>
 
                     <div class="skill-card">
                         <div class="skill-card-header">
                             <i class="fas fa-balance-scale"></i>
-                            <h3>الامتثال والحوكمة الحكومية</h3>
+                            <h3>الامتثال الحكومي</h3>
                         </div>
-                        <p>معالجة معوقات نطاقات، رفع مؤشرات الامتثال، وإدارة منصات (قوى، أبشر، مقيم، بلدي، الزكاة والضريبة والجمارك، الهيئة السعودية للتخصصات الصحية).</p>
+                        <p>إدارة كافة المنصات الحكومية بالمملكة.</p>
                     </div>
 
                     <div class="skill-card">
                         <div class="skill-card-header">
                             <i class="fas fa-chart-pie"></i>
-                            <h3>الإدارة المالية والتحليل</h3>
+                            <h3>التحليل المالي</h3>
                         </div>
-                        <p>إعداد الميزانيات، القوائم المالية، إدارة التدفقات النقدية، وإعداد الإقرارات الضريبية بكفاءة عالية.</p>
+                        <p>إعداد الميزانيات والإقرارات الضريبية.</p>
                     </div>
 
                     <div class="skill-card">
                         <div class="skill-card-header">
                             <i class="fas fa-car"></i>
-                            <h3>الجاهزية اللوجستية</h3>
+                            <h3>جاهزية نقل</h3>
                         </div>
-                        <p>امتلاك سيارة خاصة ورخصة سارية المفعول للتحرك الميداني السريع بين الفروع والجهات الرسمية.</p>
+                        <p>سيارة ورخصة قيادة سارية.</p>
                     </div>
                 </div>
 
-                <h2 style="font-size: 1.8rem; color: var(--primary-dark); margin: 3rem 0 2rem 0;">المؤهلات الأكاديمية والشهادات</h2>
                 <div class="education-list">
-                    <div class="edu-item">
-                        <i class="fas fa-user-graduate"></i>
-                        <div class="edu-details">
-                            <h3>دبلومة في المحاسبة</h3>
-                            <p>جامعة أسيوط</p>
-                        </div>
-                    </div>
-
                     <div class="edu-item">
                         <i class="fas fa-university"></i>
                         <div class="edu-details">
-                            <h3>بكالوريوس التجارة – قسم المحاسبة</h3>
-                            <p>جامعة أسيوط (يونيو 2015م)</p>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <i class="fas fa-certificate"></i>
-                        <div class="edu-details">
-                            <h3>الشهادات التدريبية</h3>
-                            <p>قيادة الحاسب الآلي (ICDL)، مهارات مايكروسوفت أوفيس المتقدمة، منهجية إدارة التغيير وتطوير بيئات العمل، والتسويق العقاري الإلكتروني.</p>
+                            <h3>بكالوريوس تجارة (محاسبة) + دبلوم محاسبة</h3>
+                            <p>جامعة أسيوط</p>
                         </div>
                     </div>
                 </div>
@@ -816,48 +610,29 @@
     <!-- SERVICES SECTION -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">الخدمات المالية والإدارية</h2>
+            <h2 class="section-title">الخدمات</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-calculator"></i>
-                    <h3>إعداد القوائم المالية</h3>
-                    <p>تقديم خدمات إعداد القوائم المالية الشاملة بما في ذلك الميزانية العمومية وقائمة الدخل وقائمة التدفقات النقدية.</p>
+                    <h3>القوائم المالية</h3>
+                    <p>ميزانيات وتدفقات نقدية</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-file-invoice-dollar"></i>
-                    <h3>إدارة الضرائب والزكاة</h3>
-                    <p>تقديم الإقرارات الضريبية وتخطيط الضرائب بما يتوافق مع قوانين هيئة الزكاة والضريبة والجمارك.</p>
+                    <h3>الزكاة والضريبة</h3>
+                    <p>إقرارات وتخطيط ضريبي</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-chart-line"></i>
-                    <h3>التحليل المالي الإستراتيجي</h3>
-                    <p>تقديم تحليل مالي دقيق يساعد في اتخاذ القرارات وتجنب المخاطر واستغلال الفرص الاستثمارية.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-coins"></i>
-                    <h3>إدارة التكاليف والترشيد</h3>
-                    <p>تحليل وترشيد التكاليف وتحسين الربحية من خلال استراتيجيات خفض التكاليف التشغيلية.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>تأسيس الأنظمة المحاسبية</h3>
-                    <p>تصميم وتطوير أنظمة محاسبية متكاملة تتناسب مع احتياجات المؤسسات باختلاف أحجامها.</p>
+                    <h3>التحليل المالي</h3>
+                    <p>دراسة الأداء والنمو</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-clipboard-check"></i>
-                    <h3>التدقيق والامتثال الحكومي</h3>
-                    <p>مراجعة دقة السجلات المالية وضمان الالتزام الشامل بكافة المنصات الحكومية وأنظمة العمل.</p>
+                    <h3>الامتثال</h3>
+                    <p>متابعة المنصات الرسمية</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CALL TO ACTION -->
-    <section class="cta">
-        <div class="container">
-            <h2>هل تبحث عن إدارة مالية وإدارية محترفة لمؤسستك؟</h2>
-            <p>أنا هنا لمساعدتك في ضبط أمورك المالية والإدارية وتحقيق أعلى مستويات النمو والامتثال!</p>
-            <a href="#contact" class="btn"><i class="fas fa-envelope"></i> ابدأ التواصل الآن</a>
         </div>
     </section>
 
@@ -869,23 +644,15 @@
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">البريد الإلكتروني</p>
-                        <p style="font-weight: 700; color: var(--primary-dark);">123mahmoud12shehab@gmail.com</p>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">البريد الإلكتروني</p>
+                        <p style="font-weight: 700; font-size: 0.8rem;">123mahmoud12shehab@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone-alt"></i>
                     <div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">أرقام التواصل</p>
-                        <p style="font-weight: 700; color: var(--primary-dark);" dir="ltr">+966 51 023 8299</p>
-                        <p style="font-weight: 700; color: var(--primary-dark);" dir="ltr">+20 109 848 7109</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">الموقع</p>
-                        <p style="font-weight: 700; color: var(--primary-dark);">المملكة العربية السعودية</p>
+                        <p style="font-size: 0.75rem; color: var(--text-muted);">الهاتف</p>
+                        <p style="font-weight: 700; font-size: 0.8rem;" dir="ltr">+966 51 023 8299</p>
                     </div>
                 </div>
             </div>
@@ -903,7 +670,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; محمود شهاب محمود - كافة الحقوق محفوظة 2026</p>
+            <p>&copy; محمود شهاب - كافة الحقوق محفوظة 2026</p>
         </div>
     </footer>
 
